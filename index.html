@@ -2,13 +2,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Para Daniela 💜</title>
+  <title>Daniela, minha estrela distraída 💫💜</title>
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      background: linear-gradient(135deg, #f3e5f5, #ede7f6, #e1bee7); /* tons lilás e roxo pastel */
-      color: #4a148c;
+      background: linear-gradient(135deg, #f8e9ff, #eaf2ff, #fce4ec); /* lavanda, azul e rosa pastel */
+      color: #4a3f72;
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -23,9 +23,10 @@
     }
 
     h1 {
-      color: #6a1b9a; 
+      color: #6a4c93; 
       margin-top: 70px;
-      font-size: 38px;
+      font-size: 36px;
+      text-shadow: 1px 1px 4px rgba(106, 76, 147, 0.3);
     }
 
     .mensagem {
@@ -33,22 +34,22 @@
       margin: 30px auto;
       max-width: 650px;
       line-height: 1.6;
-      color: #512da8;
-      background: rgba(255, 255, 255, 0.6);
+      color: #55497a;
+      background: rgba(255, 255, 255, 0.7);
       padding: 25px;
       border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(74, 20, 140, 0.2);
+      box-shadow: 0 4px 15px rgba(74, 20, 140, 0.15);
     }
 
     .imagem-amor {
-      margin: 20px auto;
-      max-width: 400px;
+      margin: 25px auto;
+      max-width: 380px;
     }
 
     .imagem-amor img {
       max-width: 100%;
       border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(106, 27, 154, 0.3);
+      box-shadow: 0 4px 20px rgba(106, 27, 154, 0.2);
     }
 
     .botoes {
@@ -62,25 +63,25 @@
     .botao {
       padding: 12px 30px;
       font-size: 20px;
-      background-color: #b39ddb; 
+      background-color: #c5b6f4; 
       color: #fff;
       border: none;
       cursor: pointer;
-      border-radius: 12px;
+      border-radius: 14px;
       transition: transform 0.3s, background-color 0.3s;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .botao:hover {
       transform: scale(1.1);
-      background-color: #9575cd;
+      background-color: #a995e8;
     }
 
     .animacao {
       display: none;
       margin-top: 50px;
       font-size: 26px;
-      color: #4a148c;
+      color: #6a4c93;
       animation: pulsar 2s infinite;
     }
 
@@ -93,7 +94,7 @@
     .coracao {
       position: absolute;
       font-size: 30px;
-      color: #ba68c8;
+      color: #b39ddb;
       animation: explodir 0.6s ease-out forwards;
       pointer-events: none;
     }
@@ -110,18 +111,19 @@
 
     #nao:hover {
       transform: scale(1.2);
-      background-color: #ab47bc; 
+      background-color: #ba9de1; 
     }
   </style>
 </head>
 <body>
   <div class="pedido">
-    <h1>Daniela 💜</h1>
+    <h1>Daniela, minha estrela distraída 💫💜</h1>
     <div class="mensagem">
-      Sabe, eu sempre gostei muito de olhar para as estrelas. Acho engraçado pensar que, quando olhamos para elas, estamos vendo o passado.  
-      Mas nesses últimos dez dias, desde que te conheci, algo mudou. Entre todas as estrelas do céu, encontrei uma que não me mostra o passado, e sim o futuro.  
-      Uma estrela que brilha de um jeito diferente, com uma luz que aquece e acalma.  
-      Essa estrela é você, Daniela — e quando olho pra você, consigo ver o nosso futuro juntos, iluminado e cheio de amor. 🌌💫
+      Sabe, eu sempre gostei muito de olhar para o céu. As estrelas sempre me deixaram curioso, porque quando a gente olha pra elas, está vendo o passado.  
+      Mas nesses últimos dias, desde que te conheci, percebi algo diferente.  
+      Entre tantas estrelas, encontrei uma que brilha de um jeito único... uma que mostra o futuro.  
+      E esse futuro tem um nome: você, Daniela.  
+      Você é a minha estrela preferida — meio bagunceira, meio encantadora, totalmente impossível de esquecer. 🌙💜
     </div>
   </div>
 
@@ -131,11 +133,11 @@
 
   <div class="botoes">
     <button id="sim" class="botao">Ver o futuro 💫</button>
-    <button id="nao" class="botao">Ainda não 🌙</button>
+    <button id="nao" class="botao">Pensar mais um pouco 🤔</button>
   </div>
 
   <div id="animacao" class="animacao">
-    Daniela sorriu... e o universo inteiro brilhou junto. 💜✨
+    Daniela sorriu... e o céu ganhou mais uma constelação 💜🌌
   </div>
 
 	<script>
@@ -156,7 +158,7 @@
 	  function criarCoracao(x, y) {
 		const coracao = document.createElement('div');
 		coracao.classList.add('coracao');
-		const emojis = ['💜', '💫', '🌌', '✨', '🌙', '⭐', '💞'];
+		const emojis = ['💜', '💫', '🌙', '⭐', '🌸', '💞'];
 		const emojiAleatorio = emojis[Math.floor(Math.random() * emojis.length)];
 		coracao.textContent = emojiAleatorio;
 		coracao.style.left = `${x}px`;
