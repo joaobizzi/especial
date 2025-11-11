@@ -2,13 +2,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Convite de Player 1</title>
+  <title>Para Daniela ✨</title>
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      background: linear-gradient(135deg, #d9fdd3, #e5d4f9); /* verde pastel e roxo pastel */
-      color: #5a2a7e;
+      background: linear-gradient(135deg, #d9fdd3, #d3e5f9); /* verde pastel e azul pastel */
+      color: #2a4a7e;
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -23,7 +23,7 @@
     }
 
     h1 {
-      color: #4a148c; 
+      color: #1e3a8a; 
       margin-top: 80px;
       font-size: 36px;
     }
@@ -32,7 +32,8 @@
       font-size: 20px;
       margin: 20px auto;
       max-width: 600px;
-      color: #33691e; 
+      color: #1b5e20; 
+      line-height: 1.6;
     }
 
     .imagem-amor {
@@ -43,7 +44,7 @@
     .imagem-amor img {
       max-width: 100%;
       border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(90, 42, 126, 0.3);
+      box-shadow: 0 4px 20px rgba(42, 90, 126, 0.3);
     }
 
     .botoes {
@@ -56,7 +57,7 @@
       display: inline-block;
       padding: 12px 24px;
       font-size: 20px;
-      background-color: #b39ddb; 
+      background-color: #90caf9; 
       color: #fff;
       border: none;
       cursor: pointer;
@@ -68,14 +69,14 @@
 
     .botao:hover {
       transform: scale(1.1);
-      background-color: #7e57c2;
+      background-color: #42a5f5;
     }
 
     .animacao {
       display: none;
       margin-top: 40px;
       font-size: 26px;
-      color: #2e7d32;
+      color: #1565c0;
       animation: pulsar 2s infinite;
     }
 
@@ -88,7 +89,7 @@
     .coracao {
       position: absolute;
       font-size: 30px;
-      color: #9575cd;
+      color: #64b5f6;
       animation: explodir 0.5s ease-out forwards;
       pointer-events: none;
     }
@@ -107,31 +108,33 @@
 
     #nao:hover {
       transform: scale(1.2);
-      background-color: #388e3c; 
+      background-color: #1976d2; 
     }
   </style>
 </head>
 <body>
   <div class="pedido">
-    <h1>Yasmin, Press START... 🎮💜💚</h1>
+    <h1>Daniela, minha estrela 💫</h1>
     <div class="mensagem">
-      Player 1 aqui falando (seu be) 👾<br><br>
-      Essa vida é muito solitária para viver sem minha Player 2 ... <br><br>
-      Então... Yasmin, aceita ser minha dupla nessa aventura? 🌸✨
+      Sabe, eu sempre gostei muito de olhar para as estrelas... 🌌<br><br>
+      Acho engraçado pensar que, quando olhamos para elas, estamos vendo o passado. <br><br>
+      Mas nesses últimos dez dias, desde que te conheci, eu encontrei uma estrela diferente... <br><br>
+      Uma que não mostra o passado, mas o **futuro**. ✨<br><br>
+      E esse futuro é **você**, Daniela — e tudo o que ainda vamos viver juntos. 💙
     </div>
   </div>
 
   <div class="imagem-amor">
-    <img src="fotinha.jpg" alt="Anime style image">
+    <img src="fotinha.jpg" alt="Foto com Daniela">
   </div>
 
   <div class="botoes">
-    <button id="sim" class="botao">Start Game 🚀</button>
-    <button id="nao" class="botao">Game Over 😢</button>
+    <button id="sim" class="botao">Ver o futuro 🌠</button>
+    <button id="nao" class="botao">Talvez outro céu 😢</button>
   </div>
 
   <div id="animacao" class="animacao">
-    Yasmin entrou no time! 🥳✨ <br> Partiuu matar os pateta (e fazer muito love)! 🎉🎮
+    Daniela sorriu... ✨💙 <br> E o universo inteiro brilhou um pouco mais. 🌌💫
   </div>
 
 	<script>
@@ -153,7 +156,7 @@
 		const coracao = document.createElement('div');
 		coracao.classList.add('coracao');
 
-		const emojis = ['💚', '💜', '✨', '🌸', '🎮', '⭐', '😎', '🎉'];
+		const emojis = ['💙', '💫', '🌌', '✨', '🌠', '💭', '🌙', '⭐'];
 		const emojiAleatorio = emojis[Math.floor(Math.random() * emojis.length)];
 		coracao.textContent = emojiAleatorio;
 
@@ -202,4 +205,3 @@
 
 </body>
 </html>
-
