@@ -2,18 +2,18 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Para Daniela ✨</title>
+  <title>Para Daniela 💜</title>
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      background: linear-gradient(135deg, #d9fdd3, #d3e5f9); /* verde pastel e azul pastel */
-      color: #2a4a7e;
+      background: linear-gradient(135deg, #f3e5f5, #ede7f6, #e1bee7); /* tons lilás e roxo pastel */
+      color: #4a148c;
       margin: 0;
       padding: 0;
       overflow: hidden;
       background-size: 400% 400%;
-      animation: fundo-animacao 10s ease infinite;
+      animation: fundo-animacao 12s ease infinite;
     }
 
     @keyframes fundo-animacao {
@@ -23,185 +23,32 @@
     }
 
     h1 {
-      color: #1e3a8a; 
-      margin-top: 80px;
-      font-size: 36px;
+      color: #6a1b9a; 
+      margin-top: 70px;
+      font-size: 38px;
     }
 
     .mensagem {
       font-size: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      color: #1b5e20; 
+      margin: 30px auto;
+      max-width: 650px;
       line-height: 1.6;
+      color: #512da8;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(74, 20, 140, 0.2);
     }
 
     .imagem-amor {
       margin: 20px auto;
-      max-width: 450px;
+      max-width: 400px;
     }
 
     .imagem-amor img {
       max-width: 100%;
       border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(42, 90, 126, 0.3);
+      box-shadow: 0 4px 20px rgba(106, 27, 154, 0.3);
     }
 
-    .botoes {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    .botao {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 20px;
-      background-color: #90caf9; 
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      margin: 0 10px;
-      transition: transform 0.3s, background-color 0.3s;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .botao:hover {
-      transform: scale(1.1);
-      background-color: #42a5f5;
-    }
-
-    .animacao {
-      display: none;
-      margin-top: 40px;
-      font-size: 26px;
-      color: #1565c0;
-      animation: pulsar 2s infinite;
-    }
-
-    @keyframes pulsar {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-
-    .coracao {
-      position: absolute;
-      font-size: 30px;
-      color: #64b5f6;
-      animation: explodir 0.5s ease-out forwards;
-      pointer-events: none;
-    }
-
-    @keyframes explodir {
-      0% { opacity: 1; transform: scale(0); }
-      100% { opacity: 0; transform: scale(1.5); }
-    }
-
-    #nao {
-      position: absolute;
-      left: 0;
-      top: 0;
-      transition: transform 0.2s, background-color 0.2s;
-    }
-
-    #nao:hover {
-      transform: scale(1.2);
-      background-color: #1976d2; 
-    }
-  </style>
-</head>
-<body>
-  <div class="pedido">
-    <h1>Daniela, minha estrela 💫</h1>
-    <div class="mensagem">
-      Sabe, eu sempre gostei muito de olhar para as estrelas... 🌌<br><br>
-      Acho engraçado pensar que, quando olhamos para elas, estamos vendo o passado. <br><br>
-      Mas nesses últimos dez dias, desde que te conheci, eu encontrei uma estrela diferente... <br><br>
-      Uma que não mostra o passado, mas o **futuro**. ✨<br><br>
-      E esse futuro é **você**, Daniela — e tudo o que ainda vamos viver juntos. 💙
-    </div>
-  </div>
-
-  <div class="imagem-amor">
-    <img src="fotinha.jpg" alt="Foto com Daniela">
-  </div>
-
-  <div class="botoes">
-    <button id="sim" class="botao">Ver o futuro 🌠</button>
-    <button id="nao" class="botao">Talvez outro céu 😢</button>
-  </div>
-
-  <div id="animacao" class="animacao">
-    Daniela sorriu... ✨💙 <br> E o universo inteiro brilhou um pouco mais. 🌌💫
-  </div>
-
-	<script>
-	  const simButton = document.getElementById('sim');
-	  const naoButton = document.getElementById('nao');
-	  const animacaoDiv = document.getElementById('animacao');
-
-	  function moverBotaoNao() {
-		const maxX = window.innerWidth - naoButton.offsetWidth;
-		const maxY = window.innerHeight - naoButton.offsetHeight;
-		const newX = Math.floor(Math.random() * maxX);
-		const newY = Math.floor(Math.random() * maxY);
-
-		naoButton.style.left = `${newX}px`;
-		naoButton.style.top = `${newY}px`;
-	  }
-
-	  function criarCoracao(x, y) {
-		const coracao = document.createElement('div');
-		coracao.classList.add('coracao');
-
-		const emojis = ['💙', '💫', '🌌', '✨', '🌠', '💭', '🌙', '⭐'];
-		const emojiAleatorio = emojis[Math.floor(Math.random() * emojis.length)];
-		coracao.textContent = emojiAleatorio;
-
-		coracao.style.left = `${x}px`;
-		coracao.style.top = `${y}px`;
-
-		document.body.appendChild(coracao);
-
-		setTimeout(() => {
-		  coracao.remove();
-		}, 1500);
-	  }
-
-	  simButton.addEventListener('click', () => {
-		simButton.style.display = 'none';
-		naoButton.style.display = 'none';
-		animacaoDiv.style.display = 'block';
-	  });
-
-	  document.addEventListener('mousemove', (e) => {
-		const rect = naoButton.getBoundingClientRect();
-		const distance = Math.sqrt(
-		  Math.pow(e.clientX - (rect.left + rect.width / 2), 2) +
-		  Math.pow(e.clientY - (rect.top + rect.height / 2), 2)
-		);
-		if (distance < 100) {
-		  moverBotaoNao();
-		}
-	  });
-
-	  window.onload = () => {
-		naoButton.style.position = "absolute";
-		naoButton.style.left = `${simButton.offsetLeft + simButton.offsetWidth + 20}px`;
-		naoButton.style.top = `${simButton.offsetTop}px`;
-	  };
-
-	  document.addEventListener('click', (e) => {
-		criarCoracao(e.clientX, e.clientY);
-	  });
-
-	  document.addEventListener('touchstart', (e) => {
-		const touch = e.touches[0];
-		criarCoracao(touch.clientX, touch.clientY);
-	  });
-	</script>
-
-</body>
-</html>
+    .botoe
