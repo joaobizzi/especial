@@ -51,4 +51,140 @@
       box-shadow: 0 4px 20px rgba(106, 27, 154, 0.3);
     }
 
-    .botoe
+    .botoes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .botao {
+      padding: 12px 30px;
+      font-size: 20px;
+      background-color: #b39ddb; 
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .botao:hover {
+      transform: scale(1.1);
+      background-color: #9575cd;
+    }
+
+    .animacao {
+      display: none;
+      margin-top: 50px;
+      font-size: 26px;
+      color: #4a148c;
+      animation: pulsar 2s infinite;
+    }
+
+    @keyframes pulsar {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    .coracao {
+      position: absolute;
+      font-size: 30px;
+      color: #ba68c8;
+      animation: explodir 0.6s ease-out forwards;
+      pointer-events: none;
+    }
+
+    @keyframes explodir {
+      0% { opacity: 1; transform: scale(0); }
+      100% { opacity: 0; transform: scale(1.6); }
+    }
+
+    #nao {
+      position: relative;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    #nao:hover {
+      transform: scale(1.2);
+      background-color: #ab47bc; 
+    }
+  </style>
+</head>
+<body>
+  <div class="pedido">
+    <h1>Daniela 💜</h1>
+    <div class="mensagem">
+      Sabe, eu sempre gostei muito de olhar para as estrelas. Acho engraçado pensar que, quando olhamos para elas, estamos vendo o passado.  
+      Mas nesses últimos dez dias, desde que te conheci, algo mudou. Entre todas as estrelas do céu, encontrei uma que não me mostra o passado, e sim o futuro.  
+      Uma estrela que brilha de um jeito diferente, com uma luz que aquece e acalma.  
+      Essa estrela é você, Daniela — e quando olho pra você, consigo ver o nosso futuro juntos, iluminado e cheio de amor. 🌌💫
+    </div>
+  </div>
+
+  <div class="imagem-amor">
+    <img src="fotinha.jpg" alt="Foto com Daniela">
+  </div>
+
+  <div class="botoes">
+    <button id="sim" class="botao">Ver o futuro 💫</button>
+    <button id="nao" class="botao">Ainda não 🌙</button>
+  </div>
+
+  <div id="animacao" class="animacao">
+    Daniela sorriu... e o universo inteiro brilhou junto. 💜✨
+  </div>
+
+	<script>
+	  const simButton = document.getElementById('sim');
+	  const naoButton = document.getElementById('nao');
+	  const animacaoDiv = document.getElementById('animacao');
+
+	  function moverBotaoNao() {
+		const maxX = window.innerWidth - naoButton.offsetWidth;
+		const maxY = window.innerHeight - naoButton.offsetHeight - 100;
+		const newX = Math.floor(Math.random() * maxX);
+		const newY = Math.floor(Math.random() * maxY);
+		naoButton.style.position = "absolute";
+		naoButton.style.left = `${newX}px`;
+		naoButton.style.top = `${newY}px`;
+	  }
+
+	  function criarCoracao(x, y) {
+		const coracao = document.createElement('div');
+		coracao.classList.add('coracao');
+		const emojis = ['💜', '💫', '🌌', '✨', '🌙', '⭐', '💞'];
+		const emojiAleatorio = emojis[Math.floor(Math.random() * emojis.length)];
+		coracao.textContent = emojiAleatorio;
+		coracao.style.left = `${x}px`;
+		coracao.style.top = `${y}px`;
+		document.body.appendChild(coracao);
+		setTimeout(() => coracao.remove(), 1500);
+	  }
+
+	  simButton.addEventListener('click', () => {
+		simButton.style.display = 'none';
+		naoButton.style.display = 'none';
+		animacaoDiv.style.display = 'block';
+	  });
+
+	  document.addEventListener('mousemove', (e) => {
+		const rect = naoButton.getBoundingClientRect();
+		const distance = Math.sqrt(
+		  Math.pow(e.clientX - (rect.left + rect.width / 2), 2) +
+		  Math.pow(e.clientY - (rect.top + rect.height / 2), 2)
+		);
+		if (distance < 100) moverBotaoNao();
+	  });
+
+	  document.addEventListener('click', (e) => criarCoracao(e.clientX, e.clientY));
+	  document.addEventListener('touchstart', (e) => {
+		const touch = e.touches[0];
+		criarCoracao(touch.clientX, touch.clientY);
+	  });
+	</script>
+</body>
+</html>
